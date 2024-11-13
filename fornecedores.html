@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo de Fornecedores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-content">
+        <h1>Gestão de Fornecedores</h1>
+        
+        <form id="supplierForm">
+            <div class="form-group">
+                <label for="supplierName">Nome do Fornecedor:</label>
+                <input type="text" id="supplierName" name="supplierName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="contact">Contato:</label>
+                <input type="text" id="contact" name="contact" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="suppliedProduct">Produto Fornecido:</label>
+                <input type="text" id="suppliedProduct" name="suppliedProduct" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="deliveryDate">Data de Entrega:</label>
+                <input type="date" id="deliveryDate" name="deliveryDate" required>
+            </div>
+            
+            <button type="submit" class="btn">Adicionar Fornecedor</button>
+        </form>
+        
+        <h2>Lista de Fornecedores</h2>
+        <table id="supplierTable">
+            <thead>
+                <tr>
+                    <th>Fornecedor</th>
+                    <th>Contato</th>
+                    <th>Produto Fornecido</th>
+                    <th>Data de Entrega</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Fornecedores adicionados serão listados aqui -->
+            </tbody>
+        </table>
+    </div>
+    <!-- Botão para voltar ao Dashboard -->
+    <div style="margin-top: 20px;">
+        <a href="index.html">
+            <button class="btn">Voltar ao Dashboard</button>
+        </a>
+    </div>
+
+    <script src="fornecedores.js"></script>
+</body>
+</html>

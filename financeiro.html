@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema ERP - Módulo Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">Sistema ERP</div>
+        <nav>
+            <a href="index.html" class="menu-item">
+                <i class="fas fa-home"></i>
+                Dashboard
+            </a>
+            <a href="produtos.html" class="menu-item">
+                <i class="fas fa-box"></i>
+                Produtos
+            </a>
+            <a href="vendas.html" class="menu-item">
+                <i class="fas fa-shopping-cart"></i>
+                Vendas
+            </a>
+            <a href="fornecedores.html" class="menu-item">
+                <i class="fas fa-truck"></i>
+                Fornecedores
+            </a>
+            <a href="financeiro.html" class="menu-item active">
+                <i class="fas fa-chart-line"></i>
+                Financeiro
+            </a>
+            <a href="relatorios.html" class="menu-item">
+                <i class="fas fa-file-alt"></i>
+                Relatórios
+            </a>
+        </nav>
+    </div>
+
+    <main class="main-content">
+        <div class="header">
+            <h1>Módulo Financeiro</h1>
+            <button class="btn" onclick="window.location.href='index.html'">Voltar ao Dashboard</button>
+        </div>
+
+        <div class="content">
+            <h2>Compras e Vendas</h2>
+            <form id="transactionForm">
+                <label for="type">Tipo:</label>
+                <select id="type" required>
+                    <option value="Compra">Compra</option>
+                    <option value="Venda">Venda</option>
+                </select>
+
+                <label for="value">Valor:</label>
+                <input type="number" id="value" required placeholder="Ex: 1000.00" />
+
+                <label for="description">Descrição:</label>
+                <textarea id="description" rows="3" placeholder="Detalhes sobre a transação"></textarea>
+
+                <label for="status">Status de Pagamento:</label>
+                <select id="status" required>
+                    <option value="Paga">Paga</option>
+                    <option value="Pendente">Pendente</option>
+                </select>
+
+                <button type="button" onclick="addTransaction()">Adicionar Transação</button>
+            </form>
+
+            <h3>Transações Recentes</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Valor</th>
+                        <th>Descrição</th>
+                        <th>Status</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="transactionList"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

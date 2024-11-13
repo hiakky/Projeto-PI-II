@@ -1,0 +1,18 @@
+<html lang="pt-BR">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Módulo de relatórios</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+    <div class="create-report">
+            <textarea id="reportText" rows="5" placeholder="Escreva seu relatório aqui..."></textarea>
+            <button class="btn" onclick="saveReport()">Salvar Relatório</button>
+        </div>
+            <div class="reports-list">
+            <h3>Relatórios Anteriores</h3>
+            <div id="reportList" class="grid-container">
+                <!-- Relatórios salvos serão listados aqui -->
+            </div>
+        </div>
+    </div>

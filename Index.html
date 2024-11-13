@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema ERP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">Sistema ERP</div>
+        <nav>
+            <a href="#" class="menu-item active">
+                <i class="fas fa-home"></i>
+                Dashboard
+            </a>
+            <a href="produtos.html" class="menu-item">
+                <i class="fas fa-box"></i>
+                Produtos
+            </a>
+            <a href="vendas.html" class="menu-item">
+                <i class="fas fa-shopping-cart"></i>
+                Vendas
+            </a>
+            <a href="fornecedores.html" class="menu-item">
+                <i class="fas fa-truck"></i>
+                Fornecedores
+            </a>
+            <a href="financeiro.html" class="menu-item">
+                <i class="fas fa-chart-line"></i>
+                Financeiro
+            </a>
+            <a href="relatorios.html" class="menu-item">
+                <i class="fas fa-file-alt"></i>
+                Relatórios
+            </a>
+        </nav>
+    </div>
+
+    <main class="main-content">
+        <div class="header">
+            <h1>Dashboard</h1>
+            <div style="display: flex; gap: 10px;">
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                    <span class="theme-text">Modo Noturno</span>
+                </button>
+                <button class="btn">Novo Registro</button>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3 class="card-title">Produtos</h3>
+                </div>
+                <div class="card-content">
+                    <p>Produtos em estoque: --</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="card-title">Vendas</h3>
+                </div>
+                <div class="card-content">
+                    <p>Vendas do mês: R$ --</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="card-title">Fornecedores</h3>
+                </div>
+                <div class="card-content">
+                    <p>Fornecedores ativos: --</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="card-title">Financeiro</h3>
+                </div>
+                <div class="card-content">
+                    <p>Saldo atual: R$ --</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root[data-theme="light"] {
+    --primary-color: #2563eb;
+    --hover-color: #1d4ed8;
+    --bg-color: #f3f4f6;
+    --card-bg: #ffffff;
+    --text-color: #1f2937;
+    --border-color: #e5e7eb;
+    --sidebar-bg: #ffffff;
+    --icon-bg: #e5e7eb;
+}
+
+:root[data-theme="dark"] {
+    --primary-color: #3b82f6;
+    --hover-color: #2563eb;
+    --bg-color: #1f2937;
+    --card-bg: #374151;
+    --text-color: #f3f4f6;
+    --border-color: #4b5563;
+    --sidebar-bg: #111827;
+    --icon-bg: #4b5563;
+}
+
+body {
+    background-color: var(--bg-color);  /* Define a cor do fundo conforme a variável do tema */
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: var(--sidebar-bg);
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.menu-item {
+    padding: 12px 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: var(--bg-color);
+}
+
+.menu-item.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.menu-item i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.theme-toggle {
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--icon-bg);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    transition: background-color 0.3s;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.card-content {
+    color: var(--text-color);
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* produtos CSS */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    margin: 0;
+    padding: 20px;
+}
+
+.main-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #2563eb;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1f2937;
+}
+
+input[type="text"], input[type="number"], input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Fornecedores CSS. */
+
+/* Estilos específicos do módulo de fornecedores */
+.main-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #2563eb;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1f2937;
+}
+
+input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+.delete-btn {
+    padding: 5px 10px;
+    background-color: #e11d48;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Módulo Relatórios */
+
+.relatorios-container {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.relatorios-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.create-report {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#createReportText {
+    resize: vertical;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    background-color: var(--card-bg);
+    transition: background-color 0.3s;
+}
+
+#createReportText:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.reports-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.report-item {
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.report-item p {
+    color: var(--text-color);
+}
+
+.report-item .date {
+    font-size: 12px;
+    color: var(--border-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .relatorios-container {
+        padding: 10px;
+    }
+    
+    .create-report textarea {
+        font-size: 14px;
+    }
+}
+
+/*  Vendas */
+.kpi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.kpi-item {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.kpi-item:hover {
+    transform: translateY(-5px);
+}
+
+.kpi-item h3 {
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.kpi-item p {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/*  Resumo Financeiro */
+.summary-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.summary-item {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+    transition: background-color 0.3s;
+}
+
+.summary-item h3 {
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.summary-item p {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Estilo para Tabela Financeira */
+.financial-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.financial-table th,
+.financial-table td {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.financial-table th {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+.financial-table td {
+    background-color: var(--bg-color);
+}
+/* Estilos para o módulo de Compras e Vendas */
+.content {
+    margin: 20px;
+}
+
+#transactionForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#transactionForm label {
+    font-weight: bold;
+}
+
+#transactionForm input,
+#transactionForm select,
+#transactionForm textarea {
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+#transactionForm button {
+    padding: 10px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#transactionForm button:hover {
+    background-color: var(--hover-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+}
+
+th {
+    background-color: var(--card-bg);
+}
+
+td {
+    text-align: center;
+}
+
+button.remove-btn {
+    padding: 5px 10px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.remove-btn:hover {
+    background-color: #d62828;
+}
+
